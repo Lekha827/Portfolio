@@ -42,7 +42,7 @@ body {
 .social-fixed {
     position: fixed;
     left: 20px;
-    top: 50%;
+    top: 40%;  /* Adjusted to move icons slightly up */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -50,8 +50,8 @@ body {
 }
 
 .social-fixed a img {
-    width: 20px;
-    height: 20px;
+    width: 18px; /* Reduced size for better balance */
+    height: 18px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -64,20 +64,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
+    padding: 20px 0; /* Removed incorrect space */
 }
 
 .home-content {
     display: flex;
-    max-width: 1100px;
+    max-width: 1200px;
     width: 100%;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
 }
 
 /* Left Side (Profile Image) */
+.home-left {
+    position: relative;
+    left: -20px;/* Move profile picture slightly left */
+}
+
 .home-left img {
-    width: 200px;
+    width: 180px; /* Reduced image size */
     height: auto;
     border-radius: 5px;
     display: block;
@@ -126,8 +131,8 @@ html {
 }
 
 .resume-btn img {
-    width: 20px;
-    height: 20px;
+    width: 18px; /* Reduced for consistency */
+    height: 18px;
     margin-right: 8px;
 }
 
@@ -139,7 +144,13 @@ html {
 /* Responsive Design */
 @media (max-width: 768px) {
     .social-fixed {
-        left: 10px;
+        position: fixed;
+        left: 20px;
+        top: 40%;  /* Adjusted to move icons slightly up */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .home-content {
@@ -147,8 +158,13 @@ html {
         text-align: center;
     }
 
+    .home-left {
+        position: relative;
+        left: -20px; /* Adjusted for mobile */
+    }
+
     .home-left img {
-        width: 160px;
+        width: 150px;
     }
 
     .home-right h1 {
@@ -160,31 +176,10 @@ html {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-left img {
-        width: 150px;
-    }
-
-    .about-right h2 {
-        font-size: 2rem;
-    }
-
-    .about-right p {
-        font-size: 1rem;
-    }
-}
-
-
 /* Sections */
 section {
-    padding: 80px 0;
-    min-height: 100vh;
+    padding: 50px 0;
+    min-height: 90vh;
 }
 
 section h2 {
@@ -194,10 +189,6 @@ section h2 {
     font-weight: 600;
 }
 
-/* Experience & Skills Section */
-.bg-light {
-    background-color: #f8f9fa !important; /* Light grey for contrast */
-}
 /* Experience Section */
 .experience-container {
     display: flex;
