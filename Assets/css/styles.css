@@ -38,33 +38,13 @@ body {
     color: #f39c12 !important;
 }
 
-/* Social Icons (Fixed on Left) */
-.social-fixed {
-    position: fixed;
-    left: 20px;
-    top: 40%;  /* Adjusted to move icons slightly up */
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.social-fixed a img {
-    width: 18px; /* Reduced size for better balance */
-    height: 18px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-fixed a img:hover {
-    transform: scale(1.2);
-}
 
 /* Home Section */
 .home-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0; /* Removed incorrect space */
+    padding: 20px 0;
 }
 
 .home-content {
@@ -73,6 +53,13 @@ body {
     width: 100%;
     align-items: center;
     gap: 10px;
+}
+/* Profile Picture (Left Column) */
+.profile-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 5px;
 }
 
 /* Left Side (Profile Image) */
@@ -88,6 +75,20 @@ body {
     display: block;
     margin: 0 auto;
 }
+/* About Section (Middle Column) */
+.home-middle h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.home-middle .highlight {
+    color: #f39c12;
+}
+
+.home-middle p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
 
 /* Right Side (Text Content) */
 .home-right {
@@ -97,6 +98,7 @@ body {
 .home-right h1 {
     font-size: 2.8rem;
     margin-bottom: 10px;
+    margin-left: 15 px;
 }
 
 .home-right .highlight {
@@ -106,6 +108,7 @@ body {
 .home-right p {
     font-size: 1.2rem;
     line-height: 1.5;
+    margin-left: 15 px;
 }
 
 html {
@@ -120,7 +123,7 @@ html {
     background-color: white;
     color: black;
     padding: 10px 15px;
-    width: 190px;
+    width: 150px;
     height: 40px;
     border-radius: 5px;
     text-decoration: none;
@@ -178,14 +181,14 @@ html {
 
 /* Sections */
 section {
-    padding: 50px 0;
-    min-height: 90vh;
+    padding: 10px 0;
+    min-height: auto;
 }
 
 section h2 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-size: 2.3rem;
     font-weight: 600;
 }
 
@@ -193,8 +196,8 @@ section h2 {
 .experience-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 5px;
 }
 
 /* Individual Experience Card */
@@ -261,46 +264,83 @@ section h2 {
 }
 
 /* Skills Section */
-.skill-card {
+.skill-category {
+    background: #f8f9fa; /* Light gray background */
+    padding: 15px;
+    border-radius: 200px;
+    text-align: center;
+    margin-bottom: 10px; /* Avoids shifting to next row */
+}
+
+/* Skills Grid */
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     padding: 10px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    margin: 10px;
+}
+
+/* Skill Card */
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px; /* Adjusted size */
+    padding: 5px;
+}
+
+/* Skill Logo */
+.skill-logo {
+    width: 45px; /* Adjusted to prevent overflow */
+    height: 45px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* Tablets */
+    .skill-category {
+        flex: 0 0 48%; /* Two columns per row */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .skill-category {
+        flex: 0 0 100%; /* Single column */
+    }
+}
+
+
+/* Resume Button & Social Icons - Aligned in One Row */
+.resume-social {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between resume button & icons */
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+/* Social Media Icons - Small & Inline */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icons a img {
+    width: 22px; /* Smaller icons */
+    height: 22px;
     transition: transform 0.3s ease-in-out;
 }
 
-.skill-card:hover {
+.social-icons a img:hover {
     transform: scale(1.1);
-}
-
-.skill-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-bottom: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        flex-direction: column;
-    }
-
-    .hero img {
-        margin: 0 auto 20px;
-        width: 150px; /* Smaller for mobile */
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
+    .resume-social {
+        flex-direction: column; /* Stack Resume + Icons for small screens */
+        align-items: center;
     }
 }
