@@ -417,6 +417,53 @@ section h2 {
     background: #444;
 }
 
+/* Achievements Section */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.achievement-item {
+    background: #f8f9fa; /* Light gray background */
+    border: 2px solid #333; /* Dark gray border */
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievement-item:hover {
+    transform: scale(1.02);
+}
+
+.achievement-item h4 {
+    color: #f39c12;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.achievement-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .achievement-item {
+        padding: 12px;
+    }
+
+    .achievement-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .achievement-item p {
+        font-size: 0.95rem;
+    }
+}
+
 /* Footer */
 .footer {
     background: #333; /* Dark background */

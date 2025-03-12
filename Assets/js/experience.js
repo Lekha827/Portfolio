@@ -2,22 +2,22 @@ const experiences = [
     {
         company: "University of Michigan",
         role: "Research Assistant",
-        location: "Dearborn, MI",
-        duration: "2024 - 2021",
+        location: "Dearborn, MI, US",
+        duration: "September,2024 - Present",
         description: "Research deepfake audio detection, focusing on generating synthetic speech using neural-based audio codecs and analyzing spectrograms for differences from original audio."
     },    
     {
         company: "TransUnion",
         role: "Senior Developer",
         location: "Hyderabad, India",
-        duration: "2021 - 2024",
+        duration: "December,2021 - July,2024",
         description: "Led the development and maintenance of the Warden application for monitoring and managing data flows in the TLOxp application using Django and Vue.js."
     },
     {
         company: "Bank of America",
         role: "Software Engineer",
         location: "Chennai, India",
-        duration: "2016 - 2021",
+        duration: "July,2016 - November,2021",
         description: "Worked on the SPARCK project in the Counterparty Credit Risk team, developing automated batch processes for exposure calculations using Monte Carlo simulations."
     },
 ];
