@@ -264,6 +264,10 @@ section h2 {
 }
 
 /* Skills Section */
+#skills h2 {
+    margin-bottom: 45px; /* Adds space below the "Skills" title */
+}
+
 .skill-category {
     background: #f8f9fa; /* Light gray background */
     padding: 15px;
