@@ -392,6 +392,31 @@ section h2 {
     }
 }
 
+/* GitHub Link Styling */
+.github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333; /* Dark GitHub-style background */
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.github-link img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.github-link:hover {
+    background: #444;
+}
+
 /* Footer */
 .footer {
     background: #333; /* Dark background */
